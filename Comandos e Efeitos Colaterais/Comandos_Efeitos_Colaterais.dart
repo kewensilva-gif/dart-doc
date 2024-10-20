@@ -1,3 +1,4 @@
+import 'dart:io';
 // Variável global (pode causar efeitos colaterais)
 int contadorGlobal = 0;
 
@@ -24,7 +25,6 @@ void adicionarItem(List<String> lista, String item) {
 }
 
 // Função assíncrona com efeito colateral: escrita em arquivo
-import 'dart:io';
 
 Future<void> registrarEmArquivo(String caminho, String conteudo) async {
   final arquivo = File(caminho);
